@@ -1,0 +1,17 @@
+name: Build BeS-dev-kit
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install poetry
+      run: pip install poetry
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
